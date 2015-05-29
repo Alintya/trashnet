@@ -1,0 +1,17 @@
+02:34:49 29.05.2015 [INFO]: Loading auth_config.xml...
+02:34:49 29.05.2015 [INFO]: Setting up servers...
+02:34:49 29.05.2015 [INFO]: Connecting to MySQL database...
+02:34:49 29.05.2015 [ERROR]: Could not connect to MySQL database: Authentication to host '127.0.0.1' for user 'root' using method 'mysql_native_password' failed with message: Access denied for user 'root'@'localhost' (using password: NO)
+   bei MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.AuthenticationFailed(Exception ex)
+   bei MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.ReadPacket()
+   bei MySql.Data.MySqlClient.Authentication.MySqlAuthenticationPlugin.Authenticate(Boolean reset)
+   bei MySql.Data.MySqlClient.NativeDriver.Authenticate(String authMethod, Boolean reset)
+   bei MySql.Data.MySqlClient.NativeDriver.Open()
+   bei MySql.Data.MySqlClient.Driver.Open()
+   bei MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   bei MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   bei MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   bei MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   bei MySql.Data.MySqlClient.MySqlConnection.Open()
+   bei FagNet.Core.Database.Database.TryConnect(String server, String user, String pw, String database) in c:\Users\JannisDesktop\Desktop\FagNet Source\wtfblub-trashnet-86220683f7a7\FagNet\FagNet.Core\Database\Database.cs:Zeile 13.
+   bei FagNetAuth.AuthServer.Start() in c:\Users\JannisDesktop\Desktop\FagNet Source\wtfblub-trashnet-86220683f7a7\FagNet\FagNetAuth\AuthServer.cs:Zeile 102.
